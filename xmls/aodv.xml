@@ -1,61 +1,53 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<scenario name="/tmp/tmp9q10lkqh">
+<scenario name="/tmp/tmp8f5apj5f">
   <networks>
-    <network id="5" name="wlan5" icon="" type="WIRELESS_LAN">
-      <position x="479.0" y="364.0" lat="47.575857671694905" lon="-122.12586982343359" alt="2.0"/>
+    <network id="1" name="wlan1" icon="" type="WIRELESS_LAN">
+      <position x="480.958984375" y="304.958984375" lat="47.57639436559644" lon="-122.1258434266495" alt="2.0"/>
     </network>
   </networks>
   <devices>
-    <device id="1" name="n1" icon="" type="mdr" class="" image="">
-      <position x="135.0" y="284.0" lat="47.57658488537098" lon="-122.13050513029964" alt="2.0"/>
+    <device id="2" name="n2" icon="" type="PC" class="" image="">
+      <position x="410.7793884277344" y="529.7528686523438" lat="47.57435091764221" lon="-122.1267890777046" alt="2.0"/>
       <services>
-        <service name="IPForward"/>
-        <service name="zebra"/>
-        <service name="OSPFv3MDR"/>
+        <service name="DefaultRoute"/>
       </services>
     </device>
-    <device id="2" name="n2" icon="" type="mdr" class="" image="">
-      <position x="331.0" y="517.0" lat="47.57446684741084" lon="-122.12786408336433" alt="2.0"/>
+    <device id="3" name="n3" icon="" type="PC" class="" image="">
+      <position x="624.6863403320312" y="410.3536682128906" lat="47.57543630430526" lon="-122.12390673944047" alt="2.0"/>
       <services>
-        <service name="IPForward"/>
-        <service name="zebra"/>
-        <service name="OSPFv3MDR"/>
+        <service name="DefaultRoute"/>
       </services>
     </device>
-    <device id="3" name="n3" icon="" type="mdr" class="" image="">
-      <position x="515.0" y="199.0" lat="47.577357538835535" lon="-122.12538473318014" alt="2.0"/>
+    <device id="4" name="n4" icon="" type="PC" class="" image="">
+      <position x="750.0" y="268.0" lat="47.57673032689423" lon="-122.12221817180364" alt="2.0"/>
       <services>
-        <service name="IPForward"/>
-        <service name="zebra"/>
-        <service name="OSPFv3MDR"/>
+        <service name="DefaultRoute"/>
       </services>
     </device>
-    <device id="4" name="n4" icon="" type="mdr" class="" image="">
-      <position x="790.0" y="355.0" lat="47.57593948373764" lon="-122.12167918263316" alt="2.0"/>
+    <device id="5" name="n5" icon="" type="PC" class="" image="">
+      <position x="643.2474975585938" y="152.5882110595703" lat="47.57777941907636" lon="-122.12365663287206" alt="2.0"/>
       <services>
-        <service name="IPForward"/>
-        <service name="zebra"/>
-        <service name="OSPFv3MDR"/>
+        <service name="DefaultRoute"/>
       </services>
     </device>
   </devices>
   <links>
-    <link node1="5" node2="1">
-      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:00" ip4="10.0.0.1" ip4_mask="24" ip6="2001::1" ip6_mask="64"/>
+    <link node1="1" node2="2">
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:01" ip4="10.0.0.21" ip4_mask="24" ip6="2001::15" ip6_mask="64"/>
     </link>
-    <link node1="5" node2="2">
-      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:01" ip4="10.0.0.2" ip4_mask="24" ip6="2001::2" ip6_mask="64"/>
+    <link node1="1" node2="3">
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:00" ip4="10.0.0.20" ip4_mask="24" ip6="2001::14" ip6_mask="64"/>
     </link>
-    <link node1="5" node2="3">
-      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:02" ip4="10.0.0.3" ip4_mask="24" ip6="2001::3" ip6_mask="64"/>
+    <link node1="1" node2="4">
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:00" ip4="10.0.0.22" ip4_mask="24" ip6="2001::16" ip6_mask="64"/>
     </link>
-    <link node1="5" node2="4">
-      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:03" ip4="10.0.0.4" ip4_mask="24" ip6="2001::4" ip6_mask="64"/>
+    <link node1="1" node2="5">
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:00" ip4="10.0.0.23" ip4_mask="24" ip6="2001::17" ip6_mask="64"/>
     </link>
   </links>
   <mobility_configurations>
-    <mobility_configuration node="5" model="basic_range">
-      <configuration name="range" value="275"/>
+    <mobility_configuration node="1" model="basic_range">
+      <configuration name="range" value="400"/>
       <configuration name="bandwidth" value="54000000"/>
       <configuration name="jitter" value="0"/>
       <configuration name="delay" value="5000"/>
@@ -74,8 +66,9 @@
     </core>
   </emane_global_configuration>
   <session_origin lat="47.579166412353516" lon="-122.13232421875" alt="2.0" scale="150.0"/>
+  <!-- Session hook would go here -->
   <session_options>
-    <configuration name="controlnet" value=""/>
+    <configuration name="controlnet" value="172.16.0.0/24"/>
     <configuration name="controlnet0" value=""/>
     <configuration name="controlnet1" value=""/>
     <configuration name="controlnet2" value=""/>
